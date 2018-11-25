@@ -14,7 +14,7 @@ const config = {
     'ticker': 'gfc'
   },
   'db': {
-    'host': '127.0.0.1',
+    'host': 'mongo',
     'port': '27017',
     'name': 'blockex',
     'user': 'blockexuser',
@@ -24,8 +24,8 @@ const config = {
     'api': 'https://extreme-ip-lookup.com/json/'
   },
   'rpc': {
-    'host': '127.0.0.1',
-    'port': '52541',
+    'host': 'daemon',
+    'port': '40880',
     'user': 'gofundrpc',
     'pass': 'someverysafepassword',
     'timeout': 8000, // 8 seconds

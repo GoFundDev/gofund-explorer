@@ -1,0 +1,17 @@
+version: "2"
+services:
+  explorer:
+    build: ./explorer
+    restart: always
+  daemon:
+    build: ./daemon
+    restart: always
+    volumes:
+    - /root/env/daemon/data:/root/.gofund
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: blockex
+      MONGO_INITDB_ROOT_USERNAME: blockexuser
+      MONGO_INITDB_ROOT_PASSWORD: Explorer!1
