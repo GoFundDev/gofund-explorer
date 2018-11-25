@@ -3,6 +3,8 @@ services:
   explorer:
     build: ./explorer
     restart: always
+    ports: 
+      - "80:8081"
   daemon:
     build: ./daemon
     restart: always
