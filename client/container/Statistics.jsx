@@ -151,7 +151,7 @@ class Statistics extends Component {
           </div>
           <div className="row">
             <div className="col-md-12 col-lg-6">
-              <h3>Bulwark Price USD</h3>
+              {/* <h3>Bulwark Price USD</h3>
               <h4>{ numeral(this.props.coin.usd).format('$0,0.00') } { day }</h4>
               <h5>{ numeral(this.props.coin.btc).format('0.00000000') } BTC</h5>
               <div>
@@ -162,7 +162,7 @@ class Statistics extends Component {
                   labels={ Array.from(prices.keys()).slice(1, -1) } />
               </div>
             </div>
-            <div className="col-md-12 col-lg-6">
+            <div className="col-md-12 col-lg-6"> */}
               <h3>Masternodes Online Last 7 Days</h3>
               <h4>{ this.props.coin.mnsOn } { day }</h4>
               <h5>Seen: { this.props.coin.mnsOn + this.props.coin.mnsOff }</h5>
