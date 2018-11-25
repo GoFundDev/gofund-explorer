@@ -31,5 +31,7 @@ COPY --from=builder /lib/x86_64-linux-gnu/libssl.so.1.0.0 /lib/x86_64-linux-gnu/
 COPY entrypoint.sh /
 COPY gofundd /
 COPY gofund-cli /
+RUN mkdir -p /root/.gofund/
+COPY gofund.conf /root/.gofund/
 
 ENTRYPOINT ["bash", "entrypoint.sh"]
