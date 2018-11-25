@@ -4,4 +4,4 @@ RUN git clone https://github.com/GoFundDev/gofund-explorer.git
 WORKDIR /workspace/gofund-explorer
 RUN yarn install
 RUN yarn run build:web
-RUN yarn run start:web
+ENTRYPOINT ["yarn", "run", "start:web"]
