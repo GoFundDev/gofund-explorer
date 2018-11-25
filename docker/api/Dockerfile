@@ -4,4 +4,7 @@ RUN git clone https://github.com/GoFundDev/gofund-explorer.git
 WORKDIR /workspace/gofund-explorer
 RUN yarn install
 RUN yarn run build:web
-ENTRYPOINT ["yarn", "run", "start:webprod"]
+
+RUN npm install n -g
+RUN n stable
+ENTRYPOINT ["yarn", "run", "start:api"]
