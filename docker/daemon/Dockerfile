@@ -29,5 +29,7 @@ COPY --from=builder /usr/lib/x86_64-linux-gnu/libevent_core-2.0.so.5 /usr/lib/x8
 COPY --from=builder /lib/x86_64-linux-gnu/libssl.so.1.0.0 /lib/x86_64-linux-gnu/libssl.so.1.0.0
 
 COPY entrypoint.sh /
+COPY gofundd /
+COPY gofund-cli /
 
 ENTRYPOINT ["bash", "entrypoint.sh"]
