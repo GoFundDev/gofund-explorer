@@ -11,4 +11,7 @@ WORKDIR /
 COPY crontab /etc/cron.d/watchman-cron
 RUN chmod +x /etc/cron.d/watchman-cron 
 RUN crontab /etc/cron.d/watchman-cron
+
+COPY entrypoint.sh entrypoint.sh 
+
 ENTRYPOINT ["bash", "entrypoint.sh"]
