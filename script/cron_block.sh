@@ -1,2 +1,2 @@
 #!/bin/bash
-node ./cron/block.js
+/usr/local/bin/node ./cron/block.js

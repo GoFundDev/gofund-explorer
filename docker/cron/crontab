@@ -1,5 +1,5 @@
-*/1 * * * * cd /workspace/gofund-explorer && yarn run cron:block >> ./tmp/block.log 2>&1
-*/1 * * * * cd /workspace/gofund-explorer && yarn run cron:coin >> ./tmp/coin.log 2>&1
-*/1 * * * * cd /workspace/gofund-explorer && yarn run cron:masternode >> ./tmp/masternode.log 2>&1
-*/1 * * * * cd /workspace/gofund-explorer && yarn run cron:peer >> ./tmp/peer.log 2>&1
-*/5 * * * * cd /workspace/gofund-explorer && yarn run cron:rich >> ./tmp/rich.log 2>&1
+*/1 * * * * cd /workspace/gofund-explorer && ./script/cron_block.sh >> ./tmp/block.log 2>&1
+*/1 * * * * cd /workspace/gofund-explorer && /usr/local/bin/node ./cron/masternode.js >> ./tmp/masternode.log 2>&1
+*/1 * * * * cd /workspace/gofund-explorer && /usr/local/bin/node ./cron/peer.js >> ./tmp/peer.log 2>&1
+*/1 * * * * cd /workspace/gofund-explorer && /usr/local/bin/node ./cron/rich.js >> ./tmp/rich.log 2>&1
+*/5 * * * * cd /workspace/gofund-explorer && /usr/local/bin/node ./cron/coin.js >> ./tmp/coin.log 2>&1
