@@ -8,9 +8,9 @@ RUN npm install n -g
 RUN n stable
 
 WORKDIR /
-COPY crontab /etc/cron.d/watchman-cron
-RUN chmod +x /etc/cron.d/watchman-cron 
-RUN crontab /etc/cron.d/watchman-cron
+COPY crontab /etc/cron.d/sync-cron
+RUN chmod +x /etc/cron.d/sync-cron 
+RUN crontab /etc/cron.d/sync-cron
 
 COPY entrypoint.sh entrypoint.sh 
 
