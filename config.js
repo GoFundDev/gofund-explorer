@@ -14,7 +14,7 @@ const config = {
     'ticker': 'gfc'
   },
   'db': {
-    'host': 'mongo',
+    'host': 'mongodb',
     'port': '27017',
     'name': 'blockex',
     'user': 'blockexuser',
