@@ -9,7 +9,6 @@ import React from 'react';
 
 import GraphLineFull from '../component/Graph/GraphLineFull';
 import HorizontalRule from '../component/HorizontalRule';
-import Notification from '../component/Notification';
 
 class Statistics extends Component {
   static propTypes = {
@@ -125,19 +124,7 @@ class Statistics extends Component {
         <div>
           <div className="row">
             <div className="col-md-12 col-lg-6">
-              <h3>Network Hash Rate Last 7 Days</h3>
-              <h4>{ numeral(netHash.hash).format('0,0.0000') } { netHash.label }/s { day }</h4>
-              <h5>Difficulty: { numeral(this.props.coin.diff).format('0,0.0000') }</h5>
-              <div>
-                <GraphLineFull
-                  color="#1991eb"
-                  data={ Array.from(hashes.values()).slice(1, -1) }
-                  height="420px"
-                  labels={ Array.from(hashes.keys()).slice(1, -1) } />
-              </div>
-            </div>
-            <div className="col-md-12 col-lg-6">
-              <h3>Transactions Last 7 Days</h3>
+            <h3>Transactions Last 7 Days</h3>
               <h4>{ numeral(tTX).format('0,0') } { day }</h4>
               <h5>Average: { numeral(avgTX).format('0,0') } Per Hour</h5>
               <div>
@@ -148,22 +135,8 @@ class Statistics extends Component {
                   labels={ Array.from(txs.keys()) } />
               </div>
             </div>
-          </div>
-          <div className="row">
             <div className="col-md-12 col-lg-6">
-              {/* <h3>Bulwark Price USD</h3>
-              <h4>{ numeral(this.props.coin.usd).format('$0,0.00') } { day }</h4>
-              <h5>{ numeral(this.props.coin.btc).format('0.00000000') } BTC</h5>
-              <div>
-                <GraphLineFull
-                  color="#1991eb"
-                  data={ Array.from(prices.values()).slice(1, -1) }
-                  height="420px"
-                  labels={ Array.from(prices.keys()).slice(1, -1) } />
-              </div>
-            </div>
-            <div className="col-md-12 col-lg-6"> */}
-              <h3>Masternodes Online Last 7 Days</h3>
+            <h3>Masternodes Online Last 7 Days</h3>
               <h4>{ this.props.coin.mnsOn } { day }</h4>
               <h5>Seen: { this.props.coin.mnsOn + this.props.coin.mnsOff }</h5>
               <div>
