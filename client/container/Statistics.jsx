@@ -9,6 +9,7 @@ import React from 'react';
 
 import GraphLineFull from '../component/Graph/GraphLineFull';
 import HorizontalRule from '../component/HorizontalRule';
+import Notification from '../component/Notification';
 
 class Statistics extends Component {
   static propTypes = {
@@ -136,7 +137,7 @@ class Statistics extends Component {
               </div>
             </div>
             <div className="col-md-12 col-lg-6">
-            <h3>Masternodes Online Last 7 Days</h3>
+              <h3>Masternodes Online Last 7 Days</h3>
               <h4>{ this.props.coin.mnsOn } { day }</h4>
               <h5>Seen: { this.props.coin.mnsOn + this.props.coin.mnsOff }</h5>
               <div>
