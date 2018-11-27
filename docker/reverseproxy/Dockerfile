@@ -1,3 +1,3 @@
 FROM nginx:alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
+RUN cat /etc/letsencrypt/live/go-fund-ico.com/fullchain.pem
