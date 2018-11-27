@@ -4,8 +4,8 @@
  */
 const config = {
   'api': {
-    'host': 'http://45.63.119.36',
-    'port': '81',
+    'host': 'http://explorer.go-fund-ico.com',
+    'port': '80',
     'prefix': '/api',
     'timeout': '5s'
   },
