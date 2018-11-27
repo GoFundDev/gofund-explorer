@@ -11,8 +11,8 @@ services:
       - ./reverseproxy/nginx.conf:/etc/nginx/conf.d/default.conf
       - ../public:/static
       - ./dh-param/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem
-      - /docker-volumes/etc/letsencrypt/live/go-fund-ico.com/fullchain.pem:/etc/letsencrypt/live/go-fund-ico.com/ful$
-      - /docker-volumes/etc/letsencrypt/live/go-fund-ico.com/privkey.pem:/etc/letsencrypt/live/go-fund-ico.com/privk$
+      - /docker-volumes/etc/letsencrypt/live/go-fund-ico.com/fullchain.pem:/etc/letsencrypt/live/go-fund-ico.com/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/go-fund-ico.com/privkey.pem:/etc/letsencrypt/live/go-fund-ico.com/privkey.pem
 
   api:
     build: ./api
